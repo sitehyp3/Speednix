@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speed Nix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+        input:focus, textarea:focus {
+            outline: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">Speed Nix</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 px-3 py-2 font-medium">FAQ</a>
+                    <a href="tel:+18777476781" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Call Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#faq" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FAQ</a>
+                <a href="tel:+18777476781" class="block w-full text-left px-3 py-2 bg-blue-600 text-white rounded-md">Call Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Before the Wi-Fi was mainstream,<br class="hidden lg:inline-block">there was Speed Nix.</h1>
+                    <p class="text-xl mb-8 opacity-90">Fiber-fast, lag-free vibes only. Speed Nix plug-and-play internet is like that copper mug cold brew—instant, refreshing, and way too smooth. Skip the buffering—our streaming-ready connections are made for 4K binge sessions, late-night game grinds, and Monday Zoom calls that don’t freeze mid-sentence.+1(877)747-6781</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="tel:+18777476781" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-flex items-center justify-center">
+                            <span>Call Now for offers</span>
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://papik.pro/uploads/posts/2023-02/1676054462_papik-pro-p-vsemirnaya-pautina-risunok-36.jpg" alt="hero" class="rounded-lg shadow-2xl max-w-full h-auto object-cover object-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">About Speed Nix</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="About Speed Nix" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Speed Nix Services</h3>
+                    <p class="text-gray-600 mb-6">Discover fast, reliable, and secure solutions with Speed Nix. From high-speed internet and dependable phone services to seamless streaming and bundled plans, we offer everything you need to stay connected at home or in business—backed by 24/7 support and advanced infrastructure.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">24/7 Customer Support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">99.9% Uptime Guarantee</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">Local Technicians</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                            <span class="text-gray-700">No Hidden Fees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Internet Service -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://www.n-vartovsk.ru/upload/iblock/cb2/3l7o1akvdy9uuknswcdyjfi81w11aen8/439ttohhgnfy4p8ugz3xupvq8wylsv3l.jpg" alt="Internet Service">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">High-Speed Internet</h3>
+                        <p class="leading-relaxed text-base mb-4">
+                            Experience ultra-fast and stable connectivity for streaming, gaming, and remote work with Speed Nix secure, high-performance internet plans.
+                        </p>
+                    </div>
+                </div>
+                <!-- Phone Service -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://static.seekingalpha.com/cdn/s3/uploads/getty_images/916184718/image_916184718.jpg?io=getty-c-w1536" alt="Phone Service">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Phone Services</h3>
+                        <p class="leading-relaxed text-base mb-4">
+                            Stay connected with our reliable phone solutions, featuring clear call quality and 24/7 support for both home and business users.
+                        </p>
+                    </div>
+                </div>
+                <!-- Bundle Plan -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.comss.net/img/072020/win-bit2010.jpg" alt="Bundle Plan">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Smart Bundles</h3>
+                        <p class="leading-relaxed text-base mb-4">
+                            Combine internet, phone, and streaming services into one cost-effective package—perfectly tailored for your lifestyle or business.
+                        </p>
+                    </div>
+                </div>
+                <!-- Streaming Service -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://im.haberturk.com/l/2025/01/12/ver1736669345/3755300/jpg/1200x628" alt="Streaming Service">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Seamless Streaming</h3>
+                        <p class="leading-relaxed text-base mb-4">
+                            Enjoy your favorite shows and platforms with uninterrupted streaming—thanks to Speed Nix lightning-fast and reliable network infrastructure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="flex w-full mb-20 flex-wrap">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Speed Nix Connectivity Solutions</h1>
+                <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
+                    At Speed Nix, we deliver ultra-fast internet, crystal-clear phone services, and seamless streaming experiences. Whether you're working remotely, gaming, or binge-watching your favorite shows, our reliable network keeps you connected without interruption.
+                </p>
+            </div>
+            <div class="flex flex-wrap md:-m-2 -m-1">
+                <div class="flex flex-wrap w-1/2">
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://www.cepkolik.com/wp-content/uploads/2021/09/En-Iyi-Film-Izleme-Siteleri.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://cdn.ldplayer.net/rms/ldplayer/process/img/f509887140ef41bdaaea5dee97b8a13c1708510891.webp?1708510893466">
+                    </div>
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://i.ytimg.com/vi/Vj2fnqu415U/maxresdefault.jpg">
+                    </div>
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://i.vuzopedia.ru/storage/app/uploads/public/670/d32/524/670d325243420419987443.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://i.ytimg.com/vi/3R867O0jIZo/maxresdefault.jpg">
+                    </div>
+                    <div class="md:p-2 p-1 w-1/2">
+                        <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://www.adlittle.com/sites/default/files/reports/arthur_d_little_report_broadcaster_5gevolvement_within_a_hybrid_environment_cover.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-md overflow-hidden">
+                    <button type="button" id="question1" data-state="closed" class="accordion-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-semibold text-black">What services does Speed Nix offer?</span>
+                        <i id="arrow1" class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="answer1" class="accordion-content bg-white px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Speed Nix offers high-speed internet, affordable phone plans, streaming packages, and custom bundles tailored for homes and businesses. As a certified JNA dealer, we bring top-tier services directly to you.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-md overflow-hidden">
+                    <button type="button" id="question2" data-state="closed" class="accordion-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-semibold text-black">What companies are serviceable through Speed Nix and JNA?</span>
+                        <i id="arrow2" class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="answer2" class="accordion-content bg-white px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>As a certified JNA dealer, Speed Nix provides services from top providers including:</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-700">
+                            <li>Paramount+</li>
+                            <li>SHOWTIME®</li>
+                            <li>AT&T</li>
+                            <li>Verizon</li>
+                            <li>Spectrum</li>
+                            <li>Comcast Xfinity</li>
+                            <li>Frontier</li>
+                            <li>HughesNet</li>
+                            <li>CenturyLink</li>
+                            <li>...and many more.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-md overflow-hidden">
+                    <button type="button" id="question3" data-state="closed" class="accordion-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-semibold text-black">Is Speed Nix a service provider?</span>
+                        <i id="arrow3" class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="answer3" class="accordion-content bg-white px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Speed Nix is an authorized dealer and certified JNA retailer. While we are not a direct internet service provider, we work closely with top brands to get you connected quickly and reliably.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-md overflow-hidden">
+                    <button type="button" id="question4" data-state="closed" class="accordion-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-semibold text-black">What are Speed Nix’s execution charges?</span>
+                        <i id="arrow4" class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="answer4" class="accordion-content bg-white px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Speed Nix charges a service execution fee for tasks such as new connections, account changes, cancellations, and upgrades. These charges range from $49.99 to $199.99 and are billed separately from your service provider's charges.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-md overflow-hidden">
+                    <button type="button" id="question5" data-state="closed" class="accordion-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-semibold text-black">Why are Speed Nix’s execution charges separate?</span>
+                        <i id="arrow5" class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="answer5" class="accordion-content bg-white px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>Because Speed Nix operates independently as a JNA-certified agent, our execution charges reflect the cost of handling service requests like installations or plan updates—separate from your provider’s monthly service billing.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div class="border border-gray-200 rounded-md overflow-hidden">
+                    <button type="button" id="question6" data-state="closed" class="accordion-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition">
+                        <span class="text-lg font-semibold text-black">How do I contact Speed Nix for support?</span>
+                        <i id="arrow6" class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="answer6" class="accordion-content bg-white px-4 pb-5 sm:px-6 sm:pb-6">
+                        <p>You can contact Speed Nix by filling out our online contact form or calling our support team using the phone number listed at the bottom of our website. We’re here to help with service requests, troubleshooting, and inquiries.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-3xl mx-auto mt-16 text-sm text-gray-500">
+                <h3 class="text-lg font-semibold text-black mb-2">Disclaimer</h3>
+                <p>
+                    The information provided on this website is for general informational purposes only. Speed Nix makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, or services listed. Any reliance you place on such information is strictly at your own risk.
+                </p>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('[id^="question"]').forEach(function(button, index) {
+                button.addEventListener('click', function() {
+                    var answer = document.getElementById('answer' + (index + 1));
+                    var arrow = document.getElementById('arrow' + (index + 1));
+                    var isOpen = answer.classList.contains('open');
+                    document.querySelectorAll('.accordion-content').forEach(function(ac) {
+                        ac.classList.remove('open');
+                    });
+                    document.querySelectorAll('.accordion-button i').forEach(function(ic) {
+                        ic.style.transform = '';
+                    });
+                    if (!isOpen) {
+                        answer.classList.add('open');
+                        arrow.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+            // Mobile menu toggle
+            document.getElementById('mobile-menu-button').onclick = function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            }
+        </script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-gray-600 body-font bg-white border-t">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                <span class="ml-3 text-xl">Speed Nix</span>
+            </a>
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a href="/terms.html" class="mr-5 hover:text-gray-900">Terms & Conditions</a>
+                <a href="/refundpolicy.html" class="mr-5 hover:text-gray-900">Refund Policy</a>
+                <a href="/privacypolicy.html" class="mr-5 hover:text-gray-900">Privacy Policy</a>
+            </nav>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"></span>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2025 Speed Nix</p>
+        </div>
+    </footer>
+</body>
+</html>
